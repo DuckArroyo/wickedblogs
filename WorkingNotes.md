@@ -51,3 +51,13 @@ exclude attribute method
 # Install bcrypt
 
 require bcrypt in User.js and insert into User model with hooks in the second object of User.
+
+# Create login call in user-routes.js
+
+POST is used in logins because it carries the req.body parameter
+
+http://localhost:3001/api/users/login
+
+Can test in insomnia by useing post, the route above and the email and password.
+
+The User model needs to be updated with the checkPassword method which is then called in the .then of the login route. This in turn compares the two passwords.
