@@ -1,0 +1,32 @@
+{
+  "name": "wickedblogs",
+  "version": "1.0.0",
+  "description": "My own blog, coding bootcamp challenge, and general project.",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuckArroyo/wickedblogs.git"
+  },
+  "keywords": [
+    "Student",
+    "project",
+    "blog"
+  ],
+  "author": "DeveloperDuckArroyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DuckArroyo/wickedblogs/issues"
+  },
+  "homepage": "https://github.com/DuckArroyo/wickedblogs#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.3-rc.0",
+    "sequelize": "^6.9.0"
+  }
+}
