@@ -98,4 +98,9 @@ Associations in the index.js within Models
 But does not get it's own routes as votes are updates to posts.
 Vote routes go inside of posts.
 
-# Continue on 13.4.5
+# Back code in the new Votes feature
+
+include the sequelize.literal to pull the votes information.
+Upvote was cleaned up quire abit. The upvote route now uses Vote model to handle procesing. Tested successfully.
+
+# Create the Comments model and the routes for the model

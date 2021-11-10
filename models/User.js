@@ -1,5 +1,6 @@
 //Connects to Model (parent) will give User properties.
 const { Model, DataTypes } = require("sequelize");
+//Connects to config. //!This line has a issue on reload so, retyping it is needed sometimes
 const sequelize = require("../config/connnection");
 
 //password encryption
@@ -14,7 +15,7 @@ class User extends Model {
   }
 }
 
-// define table columns and configuration
+// define the elements of User (columns in sql)
 User.init(
   {
     // define an id column

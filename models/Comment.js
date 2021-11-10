@@ -1,31 +1,36 @@
 //Connects to Model (parent) will give User properties.
 const { Model, DataTypes } = require("sequelize");
 //Connects to config. //!This line has a issue on reload so, retyping it is needed sometimes
-const sequelize = require("../config/connnection");
+const sequelize = require("../config/connection");
 
-class Vote extends Model {}
+// create our Comment model
+class Comment extends Model {}
 
-//create Vote model
-Vote.init(
+//Define the elements of comment (columns in sql)
+Comment.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    //Connects to the user
+    comment_text: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1],
+      },
+    },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: "user",
         key: "id",
       },
     },
-    //Connects to the blog post
     post_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: "post",
         key: "id",
@@ -34,11 +39,10 @@ Vote.init(
   },
   {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "vote",
+    modelName: "comment",
   }
 );
 
-module.exports = Vote;
+module.exports = Comment;
