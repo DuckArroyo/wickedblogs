@@ -39,3 +39,9 @@ Created at this point so there is a reference. (user routes)
 server.js
 
 -- This is the time to test server
+
+Once tested test get, post, delete. if all works move forward.
+
+# Protect the passwords
+
+exclude attribute method

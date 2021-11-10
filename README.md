@@ -18,6 +18,9 @@ mysql2
 
 - npm install dotenv
 
+Run server
+npm start or node server
+
 database and seeds need to be completed
 "seed": "node seeds/index.js"
 

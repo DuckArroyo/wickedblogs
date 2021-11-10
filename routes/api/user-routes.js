@@ -6,7 +6,10 @@ router.get("/", (req, res) => {
   // Access our User model and run .findAll() method)
   //js equivalent of sql SELECT * FROM users;
   //this is a promise because that is how sequilize works
-  User.findAll()
+  User.findAll({
+    //method to hide passwords
+    attributes: { exclude: ["password"] },
+  })
     .then((dbUserData) => res.json(dbUserData))
     .catch((err) => {
       console.log(err);
@@ -18,6 +21,7 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   //js equivalent of sql SELECT * FROM users WHERE id = #
   User.findOne({
+    attributes: { exclude: ["password"] },
     where: {
       id: req.params.id,
     },
