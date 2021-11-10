@@ -14,6 +14,10 @@ mysql2
 
 - npm install express sequelize mysql2
 
+.env
+
+- npm install dotenv
+
 database and seeds need to be completed
 "seed": "node seeds/index.js"
 
