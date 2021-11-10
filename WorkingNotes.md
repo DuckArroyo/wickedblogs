@@ -42,6 +42,12 @@ server.js
 
 Once tested test get, post, delete. if all works move forward.
 
+## Should be able to deploy to heroku here.
+
 # Protect the passwords
 
 exclude attribute method
+
+# Install bcrypt
+
+require bcrypt in User.js and insert into User model with hooks in the second object of User.

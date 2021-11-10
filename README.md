@@ -18,10 +18,16 @@ mysql2
 
 - npm install dotenv
 
-Run server
+bcrypt
+
+- npm install bcrypt
+
+## Run server
+
 npm start or node server
 
-database and seeds need to be completed
+## database and seeds need to be completed
+
 "seed": "node seeds/index.js"
 
 # Contributions by
