@@ -126,5 +126,5 @@ router.delete("/:id", (req, res) => {
     });
 });
 
-//exports to one router which is one layer up in routes folder
+//index.js in this folder is the router
 module.exports = router;
