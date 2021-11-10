@@ -11,5 +11,9 @@ router.use("/users", userRoutes);
 const postRoutes = require("./post-routes");
 router.use("/posts", postRoutes);
 
+//Same as userRoutes
+const commentRoutes = require("./comment-routes");
+router.use("/comments", commentRoutes);
+
 //exports to one router which is one layer up in routes folder
 module.exports = router;
