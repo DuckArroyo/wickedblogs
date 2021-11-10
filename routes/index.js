@@ -12,4 +12,5 @@ router.use((req, res) => {
   res.status(404).end();
 });
 
+//Exports one layer up to server.
 module.exports = router;
