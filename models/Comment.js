@@ -1,7 +1,7 @@
 //Connects to Model (parent) will give User properties.
 const { Model, DataTypes } = require("sequelize");
 //Connects to config. //!This line has a issue on reload so, retyping it is needed sometimes
-const sequelize = require("../config/connection");
+const sequelize = require("../config/connnection");
 
 // create our Comment model
 class Comment extends Model {}

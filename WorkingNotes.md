@@ -114,4 +114,4 @@ Heroku Git [Link](https://git.heroku.com/sheltered-shelf-37439.git)
 - In Heroku
   Install JawsDB in the Resources tab
 
-- Change this settings in the code
+- Change this settings in the code - connections.js
