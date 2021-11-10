@@ -104,3 +104,14 @@ include the sequelize.literal to pull the votes information.
 Upvote was cleaned up quire abit. The upvote route now uses Vote model to handle procesing. Tested successfully.
 
 # Create the Comments model and the routes for the model
+
+# Deploy to Heroku
+
+Heroku [Link](https://sheltered-shelf-37439.herokuapp.com/)
+
+Heroku Git [Link](https://git.heroku.com/sheltered-shelf-37439.git)
+
+- In Heroku
+  Install JawsDB in the Resources tab
+
+- Change this settings in the code
