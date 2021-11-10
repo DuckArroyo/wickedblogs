@@ -1,6 +1,6 @@
 //Connects to Model (parent) will give User properties.
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const sequelize = require("../config/connnection");
 
 // create our User model
 class User extends Model {}
