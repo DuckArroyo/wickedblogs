@@ -131,7 +131,7 @@ Heroku Git [Link](https://git.heroku.com/sleepy-caverns-39452.git)
 
 # Module 14
 
-## Style it
+## Style it 14.1.3
 
 # HTML via handle bars
 
@@ -150,3 +150,29 @@ inside create layouts folder
 
 rename routes to Controllers to fit the MVC model.
 
+The main.handlebars file used three curly brackets as {{{ body }}}, but here we're only using two brackets as {{ title }}. Why is that? The difference is that two brackets will convert HTML characters to strings. For instance, < would become &lt;. Three brackets, on the other hand, will render the data as HTML.
+
+For more information, review the [Handlebars.js docs on HTML escaping](https://handlebarsjs.com/guide/#html-escaping)
+
+# home-routes.js
+
+Serves
+
+- main page
+- dashboard
+- login
+
+home-routes.js is setup as a template to receive the posts as an object package.
+
+next build in the helpers to process the information being passed between the templates.
+
+# Stopping
+
+14.2.4 Front End logic
+
+in this step add navigation buttons
+
+- post
+- login
+- log out
+- main page

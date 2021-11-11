@@ -10,6 +10,7 @@ const sequelize = require("./config/connnection");
 
 //Handlebar consts
 const exphbs = require("express-handlebars");
+//hbs template/
 const hbs = exphbs.create({});
 
 //Express
