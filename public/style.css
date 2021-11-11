@@ -9,6 +9,7 @@ html {
   margin: 0;
   font-family: sans-serif;
   color: #333;
+  background-color: rgba(150, 150, 150, 0.5);
 }
 
 a {
@@ -75,6 +76,7 @@ form label {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 header {

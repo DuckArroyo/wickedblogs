@@ -7,6 +7,10 @@ const apiRoutes = require("./api");
 //apends the path /api to the routes that come from /api
 router.use("/api", apiRoutes);
 
+//Homepage routes
+const homeRoutes = require("./home-routes.js");
+router.use("/", homeRoutes);
+
 //provides an error indicating the resource does not exist
 router.use((req, res) => {
   res.status(404).end();

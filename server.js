@@ -3,8 +3,8 @@ const path = require("path");
 
 //Express
 const express = require("express");
-//Collects all the routes
-const routes = require("./routes");
+//Collects all the routes - rename to controllers
+const routes = require("./controllers");
 //connection.js connection
 const sequelize = require("./config/connnection");
 

@@ -138,3 +138,15 @@ Heroku Git [Link](https://git.heroku.com/sleepy-caverns-39452.git)
 explanation on 14.1.4
 
 install express- handlebars
+
+create Views folder
+
+- homepage.handlebars
+- welcome.handlebars
+
+inside create layouts folder
+
+- main.handlebars
+
+rename routes to Controllers to fit the MVC model.
+
