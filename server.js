@@ -8,10 +8,18 @@ const routes = require("./routes");
 //connection.js connection
 const sequelize = require("./config/connnection");
 
+//Handlebar consts
+const exphbs = require("express-handlebars");
+const hbs = exphbs.create({});
+
 //Express
 const app = express();
 //Switch to activate heroku or local host as needed.
 const PORT = process.env.PORT || 3001;
+
+//Handlebars middleware - template engine of choice
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

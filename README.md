@@ -25,6 +25,10 @@ bcrypt
 
 - npm install bcrypt
 
+Express Handlebars
+
+- npm install express-handlebars
+
 ## Run server
 
 npm start or node server
