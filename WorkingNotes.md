@@ -1,3 +1,5 @@
+# Module 13
+
 Create repo and clone
 
 Install dependencies
@@ -12,14 +14,14 @@ connect the application - config
 
 .env installation
 
-# Create the models
+## Create the models
 
 models/index.js is the home for the models
 
 - created user model
   This is where the definitions that will be inherited by sql/db will take place
 
-# Create the routes for this model -REST/CRUD
+## Create the routes for this model -REST/CRUD
 
 This naming convention along with the use of the HTTP methods follow a famous API architectural pattern called REST, or Representational State Transfer. APIs built following this pattern are what's known as RESTful APIs.
 
@@ -33,7 +35,7 @@ routes folder holds
 
 ---- holds individual routes - index.js, user-routes.js
 
-# Create server.js file
+## Create server.js file
 
 Created at this point so there is a reference. (user routes)
 server.js
@@ -44,15 +46,15 @@ Once tested test get, post, delete. if all works move forward.
 
 ## Should be able to deploy to heroku here.
 
-# Protect the passwords
+## Protect the passwords
 
 exclude attribute method
 
-# Install bcrypt
+## Install bcrypt
 
 require bcrypt in User.js and insert into User model with hooks in the second object of User.
 
-# Create login call in user-routes.js
+## Create login call in user-routes.js
 
 POST is used in logins because it carries the req.body parameter
 
@@ -70,14 +72,14 @@ User functionality complete, moving to the posts
 4. update a user route - works
 5. delete a user route - works
 
-# Post Model
+## Post Model
 
 Create post.js in models.
 Import model, connection
 Define the structure of the Post
 and export
 
-# Define relationships between models aka connect the tables in the db.
+## Define relationships between models aka connect the tables in the db.
 
 Define relationships through index.js in the models folder
 
@@ -98,20 +100,35 @@ Associations in the index.js within Models
 But does not get it's own routes as votes are updates to posts.
 Vote routes go inside of posts.
 
-# Back code in the new Votes feature
+## Back code in the new Votes feature
 
 include the sequelize.literal to pull the votes information.
 Upvote was cleaned up quire abit. The upvote route now uses Vote model to handle procesing. Tested successfully.
 
-# Create the Comments model and the routes for the model
+## Create the Comments model and the routes for the model
 
-# Deploy to Heroku
+## Deploy to Heroku
 
-Heroku [Link](https://sheltered-shelf-37439.herokuapp.com/)
+Heroku [Link](https://sleepy-caverns-39452.herokuapp.com//)
 
-Heroku Git [Link](https://git.heroku.com/sheltered-shelf-37439.git)
+Heroku Git [Link](https://git.heroku.com/sleepy-caverns-39452.git)
 
 - In Heroku
   Install JawsDB in the Resources tab
 
 - Change this settings in the code - connections.js
+  heroku create
+
+  heroku login
+
+  git push heroku main
+
+  git add -A
+
+  git commit -m "connect to jawsdb"
+
+  git push heroku main
+
+# Module 14
+
+## Style it
