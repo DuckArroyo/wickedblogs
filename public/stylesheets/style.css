@@ -9,12 +9,12 @@ html {
   margin: 0;
   font-family: sans-serif;
   color: #333;
-  background-color: rgba(150, 150, 150, 0.5);
+  background-color: rgba(150, 150, 150, 0.8);
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #adb2b8;
   font-weight: bold;
   transition: color 0.1s;
 }
@@ -69,6 +69,7 @@ form label {
   display: block;
 }
 
+/* ! Find what is this */
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -91,9 +92,10 @@ header h1 {
   font-size: 1em;
 }
 
+/* Change this color for the main body of the page */
 main {
   flex: 1;
-  padding: 2% 4%;
+  padding: 2% 10%;
 }
 
 .btn-no-style {
@@ -130,7 +132,7 @@ main {
 .post .title span {
   font-style: italic;
   font-size: 90%;
-  color: #7d7d7d;
+  color: #d8d8d8;
 }
 
 .edit-link {
@@ -179,5 +181,7 @@ footer {
   display: flex;
   justify-content: center;
   padding: 1%;
-  font-size: 110%;
+  font-size: 150%;
+  color: #fff5eb;
+
 }

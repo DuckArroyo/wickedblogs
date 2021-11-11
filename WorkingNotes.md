@@ -166,7 +166,7 @@ home-routes.js is setup as a template to receive the posts as an object package.
 
 next build in the helpers to process the information being passed between the templates.
 
-# Stopping
+# Handlebars and javascript
 
 14.2.4 Front End logic
 
@@ -176,3 +176,52 @@ in this step add navigation buttons
 - login
 - log out
 - main page
+
+- Login/signup
+  The login hadlebars file is the screen shown.
+  The login.js file manages the functionality.
+  The async and await keywords confirm the promise functionality
+  Followed by storing the fetch into response which can later be used with ok to indicate a successful response.
+  Then - the then and catch can be ommited.
+
+# Install express-sessions and connect-session-sequelize
+
+The express-session library allows us to connect to the back end. The connect-session-sequelize library automatically stores the sessions created by express-session into our database
+
+<!-- Ask this question  -->
+<!-- I would like to embed this code into the post page for visitors to know they visited and for the blogger to see how many views they have. !dashboard, createpost,? -->
+
+if(!req.session.views){
+req.session.view = 1;
+console.log("This is your first visit");
+} else {
+req.session.views++
+console.log(`You have visited ${req.session.views} times`);
+}
+
+Install npm package
+
+# Setup > Will create login state
+
+Add code to serve.js file in root folder.
+Set the secret variable and secret in .env file.
+Add the information to the routes
+
+- user-routes.js > into the post > then
+- user-routes.js > into the login > then
+
+- home-routes.js > into the login
+
+In the main body of the call add if logged in to route user back to main page otherwise continue to login.
+
+# Setup > Will create a detroy the session state.
+
+3 to dos
+
+- create a route in the user-routes /logout and use destroy method to destroy the session.
+- create the button to trigger the route "logout"
+- create the logout.js file to handle the logic
+  Button press listener
+  trigger async function
+  create fetch request
+  get response

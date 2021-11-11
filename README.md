@@ -29,6 +29,10 @@ Express Handlebars
 
 - npm install express-handlebars
 
+express-sessions and connect-session-sequelize
+
+- npm i express-session connect-session-sequelize
+
 ## Run server
 
 npm start or node server

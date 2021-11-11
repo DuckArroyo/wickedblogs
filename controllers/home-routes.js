@@ -56,6 +56,12 @@ router.get("/", (req, res) => {
 
 //Route for login page
 router.get("/login", (req, res) => {
+  //Checks for a session and redirects if the user is not logged in.
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  console.log("User was redirected, not logged in");
   res.render("login");
 });
 
