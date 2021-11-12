@@ -1,19 +1,11 @@
 {{!-- Site homepage --}}
+
+{{!-- Reference the single-post.handlebars for the full code --}}
+
 <ol class="post-list">
-  {{!-- each allows for iteration of the posts, i.e. a loop to create each item --}}
-  {{#each posts}}
+  {{#each posts as |post|}}
   <li>
-    <article class="post">
-      <div class="title">
-        <a href="/post/{{id}}" target="_blank">{{title}}</a>
-      </div>
-      <div class="meta">
-        {{vote_count}} point(s) by {{user.username}} on
-        {{created_at}}
-        |
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
-      </div>
-    </article>
+    {{> post-info post }}
   </li>
   {{/each}}
 </ol>

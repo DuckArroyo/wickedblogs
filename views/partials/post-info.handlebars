@@ -1,0 +1,15 @@
+{{!-- post-info partial --}}
+<ol class="post-list">
+  {{!-- each allows for iteration of the posts, i.e. a loop to create each item --}}
+
+    <article class="post">
+      <div class="title">
+        <a href="/post/{{id}}">{{title}}</a>
+      </div>
+      <div class="meta">
+        {{vote_count}} point(s) by {{user.username}} on {{format_date created_at}}
+        |
+        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+      </div>
+    </article>
+  </li>

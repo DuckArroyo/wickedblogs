@@ -43,8 +43,12 @@ require("dotenv").config();
 
 //Handlebar consts
 const exphbs = require("express-handlebars");
+
+//Imports helper functions which will be used with handlebars.js
+const helpers = require("./utils/helpers");
+
 //hbs template/
-const hbs = exphbs.create({});
+const hbs = exphbs.create({ helpers });
 
 //Switch to activate heroku or local host as needed.
 const PORT = process.env.PORT || 3001;

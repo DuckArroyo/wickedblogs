@@ -256,3 +256,9 @@ If an item like a button is invoking logic, apply the same #if
 
 backend - all the pages (through the routes) that apply
 the loggedIn item needs to be added to the .then in the route
+
+Install jest to test the app, setup test and utils
+Then import helper functions to server to pass onto handlebars
+then the helpers can be implemented like this.
+created_at > format_date created_at
+Similar to format_date(created_at)

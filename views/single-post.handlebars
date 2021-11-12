@@ -29,18 +29,9 @@
   </div>
 </form>
 
-<div class="comments">
-  {{#each post.comments}}
-  <section class="comment">
-    <div class="meta">
-      {{user.username}} on {{created_at}}
-    </div>
-    <div class="text">
-      {{comment_text}}
-    </div>
-  </section>
-  {{/each}}
-</div>
+{{!-- Reference the comments.handlebars for the full code --}}
+{{> comments post.comments}}
+
 {{/if}}
 
 {{!-- Connects to the comment and upvote logic --}}
