@@ -13,18 +13,22 @@ router.get("/", (req, res) => {
 
 //Create post
 router.post("/", (req, res) => {
-  console.log(Comment);
-  // {"comment_text": "This is the comment", "user_id": #, "post_id": #}
-  Comment.create({
-    comment_text: req.body.comment_text,
-    user_id: req.body.user_id,
-    post_id: req.body.post_id,
-  })
-    .then((dbCommentData) => res.json(dbCommentData))
-    .catch((err) => {
-      console.log(err);
-      res.status(400).json(err);
-    });
+  //check the session
+  if (req.session) {
+    // {"comment_text": "This is the comment", "user_id": #, "post_id": #}
+    Comment.create({
+      comment_text: req.body.comment_text,
+      user_id: req.body.user_id,
+      post_id: req.body.post_id,
+      // use the id from the session
+      user_id: req.session.user_id,
+    })
+      .then((dbCommentData) => res.json(dbCommentData))
+      .catch((err) => {
+        console.log(err);
+        res.status(400).json(err);
+      });
+  }
 });
 
 //Destroy the comment based on ID

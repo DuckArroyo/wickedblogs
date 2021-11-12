@@ -8,8 +8,8 @@ html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #333;
-  background-color: rgba(150, 150, 150, 0.8);
+  color: rgb(39, 39, 39);
+  background-color: rgba(216, 214, 214, 0.685);
 }
 
 a {
@@ -62,7 +62,7 @@ textarea {
 }
 
 form > div {
-  margin-bottom: 2%;
+  margin: 2%;
 }
 
 form label {
@@ -101,10 +101,11 @@ main {
 .btn-no-style {
   background: none;
   border: none;
+  padding-right: 20px;
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: #205ca5;
   font-size: 100%;
   font-weight: bold;
   transition: color 0.1s;
@@ -132,7 +133,7 @@ main {
 .post .title span {
   font-style: italic;
   font-size: 90%;
-  color: #d8d8d8;
+  color: #dad8d8;
 }
 
 .edit-link {
@@ -159,13 +160,14 @@ main {
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color: #e6e2dfb0;
 }
 
 .comment .meta {
   font-size: 90%;
   margin-bottom: 0.5%;
   opacity: 0.6;
+  border-radius: 10%;
 }
 
 .new-post-form input {
@@ -183,5 +185,4 @@ footer {
   padding: 1%;
   font-size: 150%;
   color: #fff5eb;
-
 }

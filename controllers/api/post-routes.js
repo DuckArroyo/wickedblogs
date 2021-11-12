@@ -152,22 +152,16 @@ router.post("/", (req, res) => {
 
 // PUT /api/posts/upvote
 router.put("/upvote", (req, res) => {
-  //Static method created in models/Post.js
-  Post.upvote(
-    req.body,
-    { Vote }
-
-    //These are the original parameters passing to the route.
-    //They are being updated with the code above which uses the model to process
-    // user_id: req.body.user_id,
-    // post_id: req.body.post_id,
-  )
-
-    .then((updatePostData) => res.json(updatePostData))
+    // make sure the session exists first
+    if (req.session) {
+    // pass session id along with all destructured properties on req.body
+    Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+    .then(updatedVoteData => res.json(updatedVoteData))
     .catch((err) => {
       console.log(err);
-      res.status(400).json(err);
+      res.status(500).json(err);
     });
+  }
 });
 
 //UPDATE a post  - works

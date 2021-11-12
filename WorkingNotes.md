@@ -225,3 +225,28 @@ In the main body of the call add if logged in to route user back to main page ot
   trigger async function
   create fetch request
   get response
+
+# Single post hadlebars
+
+Create single post.handlebars file
+it contains the code for 1 post.
+Connects to home-routes.js where the route resides.
+
+Then, include a form to accept comments and upvotes. This will also carry the loading of comments for the post.
+
+Now the logic for the comments functionality. (Front End)
+comment.js
+upvote.js
+
+Jump to the post-routes.js
+Since this can only be done by a current user, encampuslate in if(req.session), so only users can vote
+pass the body, the user.id:re.session.id info, and the models to be destructure.
+ 
+Comments go to the comment-routes.js
+The POST API call just needs to match the fetch
+
+# Conditional statements - Helpers -
+
+Functionality for logged in users only
+{{#if value}}
+{{/if}}
