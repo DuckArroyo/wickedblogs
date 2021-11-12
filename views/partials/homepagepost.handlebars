@@ -1,10 +1,3 @@
 {{!-- post-info partial --}}
 {{!-- each allows for iteration of the posts, i.e. a loop to create each item --}}
-
-<article class="post">
-  <div class="title"><h1 href="/post/{{id}}">{{title}}</h1></div>
-  <div class="meta">
-    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-  </div>
-</article>
+{{> post-info post }}

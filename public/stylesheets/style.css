@@ -161,6 +161,7 @@ main {
 
 .comment:nth-child(odd) {
   background-color: #e6e2dfb0;
+  border-radius: 15px;
 }
 
 .comment .meta {

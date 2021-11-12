@@ -1,16 +1,13 @@
 {{!-- post-info partial --}}
-{{!-- each allows for iteration of the posts, i.e. a loop to create each item --}}
-
-<article class="post">
-  <div class="title"><h1>{{title}}</h1></div>
- <br>
-  <div class="comment">{{blog_post}}</div>  
-</article>
-<br>
-<article>
-<article class="post">
-  <div class="meta">
-    {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+  {{!-- each allows for iteration of the posts, i.e. a loop to create each item --}}
+{{!-- Change a to an h1? --}}
+    <article class="post">
+      <div class="title">
+        <a href="/post/{{id}}">{{title}}</a>
       </div>
-</article>
+      <div class="meta">
+        {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
+        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+      </div>
+    </article>
+  </li>
