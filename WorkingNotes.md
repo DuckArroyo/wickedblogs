@@ -241,7 +241,7 @@ upvote.js
 Jump to the post-routes.js
 Since this can only be done by a current user, encampuslate in if(req.session), so only users can vote
 pass the body, the user.id:re.session.id info, and the models to be destructure.
- 
+
 Comments go to the comment-routes.js
 The POST API call just needs to match the fetch
 
@@ -250,3 +250,9 @@ The POST API call just needs to match the fetch
 Functionality for logged in users only
 {{#if value}}
 {{/if}}
+
+handlebars
+If an item like a button is invoking logic, apply the same #if
+
+backend - all the pages (through the routes) that apply
+the loggedIn item needs to be added to the .then in the route

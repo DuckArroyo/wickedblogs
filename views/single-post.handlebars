@@ -17,6 +17,7 @@
 </article>
 
 {{!-- Form to handle comments submissions and shows comments --}}
+{{#if loggedIn}}
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
@@ -40,13 +41,10 @@
   </section>
   {{/each}}
 </div>
+{{/if}}
 
 {{!-- Connects to the comment and upvote logic --}}
+{{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>
-
-{{!--! Original code  --}}
-  {{!-- <div class="title">
-    <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-    <span>({{post.post_url}})</span>
-  </div> --}}
+{{/if}}

@@ -47,7 +47,7 @@ router.get("/", (req, res) => {
       //This will loop over and map each sequelize object and passes them to posts as an array
       const posts = dbPostData.map((post) => post.get({ plain: true }));
       // posts is passed as an objet with an array
-      res.render("homepage", { posts });
+      res.render("homepage", { posts, loggedIn: req.session.loggedIn });
     })
     .catch((err) => {
       console.log(err);
@@ -109,7 +109,7 @@ router.get("/post/:id", (req, res) => {
       const post = dbPostData.get({ plain: true });
 
       // pass data to template
-      res.render("single-post", { post });
+      res.render("single-post", { post, loggedIn: req.session.loggedIn });
     })
     .catch((err) => {
       console.log(err);
