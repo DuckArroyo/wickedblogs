@@ -1,20 +1,7 @@
 {{!-- Template for a single post --}}
 {{!-- Connects to home-routes.js --}}
-<article class="post">
-  <div class="title"><h1>{{post.title}}</h1></div>
- <br>
-  <div class="comment">{{post.blog_post}}</div>  
-</article>
-<br>
-<article>
-  <div class="meta">
-    {{post.vote_count}} point(s) by {{post.user.username}} on
-    {{post.created_at}}
-    |
-    {{!-- I think this is whay I need to invoke in the span above. Leave here also though --}}
-    <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-  </div>
-</article>
+
+{{> post-info post }}
 
 {{!-- Form to handle comments submissions and shows comments --}}
 {{#if loggedIn}}
