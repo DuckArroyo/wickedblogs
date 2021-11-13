@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../../config/connnection");
-const withAuth = require('../../utils/auth');
+const withAuth = require("../../utils/auth");
 
 //We connect to post, user, and vote to have the full set of data.
 const { Post, User, Vote, Comment } = require("../../models");
@@ -155,15 +155,18 @@ router.post("/", withAuth, (req, res) => {
 
 // PUT /api/posts/upvote
 router.put("/upvote", withAuth, (req, res) => {
-    // make sure the session exists first
-    if (req.session) {
+  // make sure the session exists first
+  if (req.session) {
     // pass session id along with all destructured properties on req.body
-    Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
-    .then(updatedVoteData => res.json(updatedVoteData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+    Post.upvote(
+      { ...req.body, user_id: req.session.user_id },
+      { Vote, Comment, User }
+    )
+      .then((updatedVoteData) => res.json(updatedVoteData))
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
   }
 });
 
@@ -196,6 +199,7 @@ router.put("/:id", withAuth, (req, res) => {
 
 //DELETE a post - Works
 router.delete("/:id", withAuth, (req, res) => {
+  console.log("id", req.params.id);
   Post.destroy({
     where: {
       id: req.params.id,

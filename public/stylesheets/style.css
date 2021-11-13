@@ -69,7 +69,6 @@ form label {
   display: block;
 }
 
-/* ! Find what is this */
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -160,7 +159,12 @@ main {
 }
 
 .comment:nth-child(odd) {
-  background-color: #e6e2dfb0;
+  background-color: #d4d3c7b0;
+  border-radius: 10px;
+}
+
+.comment:nth-child(even) {
+  background-color: #9da097b0;
   border-radius: 10px;
 }
 
