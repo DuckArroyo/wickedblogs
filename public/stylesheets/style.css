@@ -129,6 +129,15 @@ main {
   line-height: 150%;
 }
 
+#post-title {
+  height: 35px;
+  width: 450px;
+}
+#blog_post {
+  height: 200px;
+  width: 450px;
+}
+
 .post .title span {
   font-style: italic;
   font-size: 90%;
