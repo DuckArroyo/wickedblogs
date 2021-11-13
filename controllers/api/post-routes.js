@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../../config/connnection");
+const withAuth = require('../../utils/auth');
 
 //We connect to post, user, and vote to have the full set of data.
 const { Post, User, Vote, Comment } = require("../../models");
@@ -136,7 +137,7 @@ router.get("/:id", (req, res) => {
 
 //Create a post - works
 //
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
   // expects {title: 'Taskmaster goes public!', blog_post: 'blah blah', user_id: 1}
   //Equivalent of Insert in SQL
   Post.create({
@@ -153,7 +154,7 @@ router.post("/", (req, res) => {
 });
 
 // PUT /api/posts/upvote
-router.put("/upvote", (req, res) => {
+router.put("/upvote", withAuth, (req, res) => {
     // make sure the session exists first
     if (req.session) {
     // pass session id along with all destructured properties on req.body
@@ -167,7 +168,7 @@ router.put("/upvote", (req, res) => {
 });
 
 //UPDATE a post  - works
-router.put("/:id", (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   // expects {title: 'Taskmaster goes public!', blog_post: 'blah blah', user_id: #}
   Post.update(
     {
@@ -194,7 +195,7 @@ router.put("/:id", (req, res) => {
 });
 
 //DELETE a post - Works
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
   Post.destroy({
     where: {
       id: req.params.id,
