@@ -16,9 +16,9 @@
 <body>
   <div class="wrapper">
     <header>
-      <h1>
-        <a href="/" style="color: rgba(240, 32, 32, 0.76);">Wicked Blogs</a>
-      </h1>
+      <a href="/">
+          <img style="width: 200px;" src="/assets/logo-01.png" alt="Wicked logo">
+        </a>
       <nav>
           {{#if loggedIn}}
 
@@ -33,6 +33,7 @@
           {{/if}}
       </nav>
     </header>
+    
     <main>
       {{{ body }}}
     </main>

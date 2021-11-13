@@ -1,7 +1,19 @@
 {{!-- Site homepage --}}
 
 {{!-- Reference the single-post.handlebars for the full code --}}
+{{#if loggedIn}}
+{{else}}
 
+<Div id="hero">
+  <h1>Welcome to Wicked Blogs</h1>
+  <div>
+    <p>You have found the place to share your creative toughts</p>
+  </div>
+  <div>
+    <a href="/login">  Create an account  </a>
+    </div>
+</Div>
+{{/if}}
 <ol class="post-list">
   {{#each posts as |post|}}
   <li>
