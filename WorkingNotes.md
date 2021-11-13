@@ -262,3 +262,13 @@ Then import helper functions to server to pass onto handlebars
 then the helpers can be implemented like this.
 created_at > format_date created_at
 Similar to format_date(created_at)
+
+# Creating the dashboard - 14.5.3
+
+create dashboard.handlebars
+add connections to index in the same folder
+create dashboard-routes.js and add get 
+add href "button" to main which will manually route to dashboard
+And add logic to login.js that automatically redirects to dashboard instead of the homepage
+make the dashboard visible to logged in users by adding withAuth to  route.
+The dashboard employs the edit functionality to edit the user's own posts

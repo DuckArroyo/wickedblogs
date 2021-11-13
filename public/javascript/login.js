@@ -25,7 +25,7 @@ async function loginFormHandler(event) {
     // check the response status
     // response + ok replace then()s but continue the functionality
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
       alert(response.statusText);
     }

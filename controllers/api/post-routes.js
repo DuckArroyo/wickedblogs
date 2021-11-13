@@ -135,13 +135,15 @@ router.get("/:id", (req, res) => {
 });
 
 //Create a post - works
+//
 router.post("/", (req, res) => {
   // expects {title: 'Taskmaster goes public!', blog_post: 'blah blah', user_id: 1}
   //Equivalent of Insert in SQL
   Post.create({
     title: req.body.title,
     blog_post: req.body.blog_post,
-    user_id: req.body.user_id,
+    //updated to grab the user id from the session
+    user_id: req.session.user_id,
   })
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {

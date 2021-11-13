@@ -11,8 +11,6 @@
   <div class="meta">
     {{post.vote_count}} {{format_plural "point" vote_count}} by {{post.user.username}} on
     {{format_date post.created_at}}
-    |
-    {{!-- I think this is whay I need to invoke in the span above. Leave here also though --}}
     <a href="/post/{{post.id}}">{{format_plural "comment" post.comments.length}}</a>
   </div>
 </article>
