@@ -48,3 +48,17 @@ DeveloperDuckArroyo
 Twitter [@DevDuckArroyo](https://twitter.com/DevDuckArroyo)
 
 LinkeIn [Rafael Arroyo](https://www.linkedin.com/in/duckarroyo/)
+
+# Screnshots
+
+<img src="./public/assets/afrontpage.png" style="width: 400px">
+
+<img src="./public/assets/bdashboard1.png" style="width: 400px">
+
+<img src="./public/assets/bdashboard2.png" style="width: 400px">
+
+<img src="./public/assets/blogin.png" style="width: 400px">
+
+<img src="./public/assets/cEditpost.png" style="width: 400px">
+
+<img src="./public/assets/dPopulatedfrontpage.png" style="width: 400px">
