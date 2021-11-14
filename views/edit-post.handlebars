@@ -6,7 +6,10 @@
   <form class="edit-post-form">
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
-      <span>Original post: ({{post.blog_post}})</span>
+      <span>Original title: ({{post.title}})</span>
+      <input name="post-title" type="text" value="{{post.blog_post}}" />
+      <span>Original title: ({{post.blog_post}})</span>
+
     </div>
     <div>
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
@@ -35,7 +38,7 @@
 {{/if}}
 {{!-- Connects to the comment and upvote logic --}}
 {{#if loggedIn}}
-<script src="/javascript/edit-post.js"></script>
-<script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>
+<script src="../public/javascript/edit-post.js"></script>
+<script src="../public/javascript/delete-post.js"></script>
+<script src="../public/javascript/comment.js"></script>
 {{/if}}

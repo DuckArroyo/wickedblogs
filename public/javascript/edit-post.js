@@ -1,15 +1,17 @@
 async function editFormHandler(event) {
   event.preventDefault();
 
-  const title = document.querySelector('input[name="post-title"]').value.trim();
+  const title = document.querySelector('input [name="post-title"]').value.trim();
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
   ];
+  console.log("Title in update", title, "blog post", blog_post);
+
   const response = await fetch(`/api/posts/${id}`, {
     method: "PUT",
     body: JSON.stringify({
       title,
-      description,
+      blog_post,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -17,7 +19,7 @@ async function editFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace("/dashboard/");
+    document.location.replace("/dashboard");
   } else {
     alert(response.statusText);
   }
