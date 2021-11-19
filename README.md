@@ -3,7 +3,7 @@
 UO Coding bootcamp Challenge 14
 
 Deployed application Heroku
-[Link](https://sleepy-caverns-39452.herokuapp.com//)
+[Link](https://sleepy-caverns-39452.herokuapp.com/)
 
 ## Required installations for code duplication
 
