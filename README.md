@@ -1,9 +1,16 @@
-# wickedblogs
+# wickedblogs ![GitHublicense](https://img.shields.io/npm/l/express?style=for-the-badge)
 
-UO Coding bootcamp Challenge 14
+## UO Coding bootcamp Challenge 14
 
-Deployed application Heroku
-[Link](https://sleepy-caverns-39452.herokuapp.com/)
+## Links
+
+Github Repository [Link](HTTPS://github.com/DuckArroyo/wickedblogs)
+
+Heroku [Link](https://sleepy-caverns-39452.herokuapp.com/)
+
+## Description
+
+Blog application
 
 ## Required installations for code duplication
 
@@ -37,17 +44,30 @@ express-sessions and connect-session-sequelize
 
 npm start or node server
 
-## database and seeds need to be completed
+## The commandments
 
+"scripts": {
+"watch": "nodemon server.js",
+"test": "jest",
+"start": "node server.js",
 "seed": "node seeds/index.js"
+},
 
-# Contributions by
+# Contributions by:
 
 DeveloperDuckArroyo
 
-Twitter [@DevDuckArroyo](https://twitter.com/DevDuckArroyo)
+[Portfolio](https://duckarroyo.github.io/challenge2/)
 
-LinkeIn [Rafael Arroyo](https://www.linkedin.com/in/duckarroyo/)
+[GitHub](https://github.com/DuckArroyo)
+
+[Twitter @DevDuckArroyo](https://twitter.com/DevDuckArroyo)
+
+[LinkeIn](https://www.linkedin.com/in/duckarroyo/)
+
+[CodePen](https://codepen.io/DeveloperDuckArroyo)
+
+[Email](mailto:DeveloperDuckArroyo@gmail.com)
 
 # Screnshots
 
